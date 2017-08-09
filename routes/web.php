@@ -12,9 +12,13 @@
 */
 
 Route::get('/', function () {
-    // $str = ReflectionFunction::export('response', 1);
-    $str = ReflectionClass::export('Cookie', 1);
-    return $str;
+  $str = ReflectionFunction::export('app', 1);
+  // $str = Config::get('wx.AppID');
+
+  $str = App::environment();
+
+
+  return $str;
 });
 
 
